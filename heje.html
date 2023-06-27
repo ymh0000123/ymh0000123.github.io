@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>网站合集</title>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: white;
+      color: black;
+    }
+    
+    h1 {
+      text-align: center;
+      color: black;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 20px;
+    }
+    
+    .sidebar {
+      width: 200px;
+    }
+    
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav li {
+      margin-bottom: 10px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    nav li:hover {
+      opacity: 0.7;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: black;
+    }
+    
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .category-box {
+      flex: 0 0 calc(50% - 10px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+     opacity: 1;
+     transition: opacity 0.3s ease;
+    }
+	@media screen and (max-width: 768px) {
+       .category-box {
+       flex-basis: 100%;
+      }
+    }
+    
+    .category-box:hover {
+      opacity: 0.7;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+    
+    li {
+      margin-bottom: 5px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .remark {
+      font-style: italic;
+      color: #666;
+      white-space: nowrap; /* 防止换行 */
+      overflow: hidden; /* 超出部分隐藏 */
+      text-overflow: ellipsis; /* 超出部分显示省略号 */
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <nav>
+      <h1><iconify-icon icon="material-symbols:bookmarks-outline" width="50" height="50"></iconify-icon>网站合集</h1>
+      <ul>
+        <li><a href="#category1">类别1</a></li>
+        <li><a href="#category2">mc</a></li>
+		<li><a href="#about">关于</a></li>
+        <!-- 添加更多类别 -->
+      </ul>
+    </nav>
+    
+    <div class="sidebar">
+      <h2 id="category1">类别1</h2>
+      <div class="category-container">
+        <div class="category-box">
+          <ul>
+            <li>
+              <a href="http://www.example1.com">网站1</a>
+              <span class="remark">这是一个很长的备注内容，如果超出方框的宽度，将会显示省略号。</span>
+            </li>
+            <li>
+              <a href="http://www.example2.com">网站2</a>
+              <span class="remark">备注2</span>
+            </li>
+            <li>
+              <a href="http://www.example3.com">网站3</a>
+              <span class="remark">备注3</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <h2 id="category2">mc</h2>
+      <div class="category-container">
+        <div class="category-box">
+          <ul>
+            <li>
+              <a href="https://www.mcmod.cn/">MC百科</a>
+              <span class="remark">国内比较全的的mood百科</span>
+            </li>
+            <li>
+              <a href="https://www.chunkbase.com/">chunkbase</a>
+              <span class="remark">可以快速查找种子内的结构比，如沙漠神殿</span>
+            </li>
+            <li>
+              <a href="https://littleskin.cn/">littleskin</a>
+              <span class="remark">皮肤，三方登录</span>
+            </li>
+            <li>
+              <a href="http://s.ikuns.pro/">简幻欢</a>
+              <span class="remark">免费开服，延迟低</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+	  
+      <h2 id="about">关于</h2>
+      <div class="category-container">
+        <div class="category-box">
+          <ul>
+            <li>
+              <a href="https://space.bilibili.com/1783868793">b站主页</a>
+             
+            </li>
+            <li>
+              <a href="https://github.com/ymh0000123">github主页</a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 添加更多类别和网站 -->
+    </div>
+  </div>
+</body>
+</html>
