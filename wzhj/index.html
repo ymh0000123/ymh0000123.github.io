@@ -31,10 +31,20 @@
     }
     
     nav {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 200px;
+	  height: 100vh;
       background-color: #f2f2f2;
       padding: 10px;
+	  overflow-y: auto;
     }
     
+	.main-content {
+      margin-left: 220px; /* 根据导航栏的宽度进行调整 */
+    }
+	
     nav ul {
       list-style-type: none;
       padding: 0;
@@ -120,12 +130,14 @@
 	    <li><iconify-icon icon="mingcute:black-board-2-line"></iconify-icon><a href="#head">公告</a></li>
         <li><iconify-icon icon="mingcute:openai-line"></iconify-icon><a href="#category1">chatgpt</a></li>
         <li><iconify-icon icon="mingcute:game-2-line"></iconify-icon><a href="#mc">mc</a></li>
+		<li><iconify-icon icon="mingcute:disc-line"></iconify-icon><a href="#yl">娱乐</a></li>
+		<li><iconify-icon icon="mingcute:clapperboard-line"></iconify-icon><a href="#frp">frp</a></li>
 		<li><iconify-icon icon="dashicons:id-alt"></iconify-icon><a href="#about">关于</a></li>
         <!-- 添加更多类别 -->
 		<img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:100%; display: block; margin: 0 auto;">
       </ul>
     </nav>
-    
+    <div class="main-content">
     <div class="sidebar">
       <h2 id="head"><iconify-icon icon="mingcute:black-board-2-line"></iconify-icon><a href="#head">公告</h2>
 	  <div class="category-container">
@@ -178,11 +190,45 @@
               <a href="http://s.ikuns.pro/">简幻欢</a>
               <span class="remark">免费开服，延迟低</span>
             </li>
+			<li>
+              <a href="https://www.wurstclient.net/">wurstclient</a>
+              <span class="remark">wurstclient是一款免费的黑客端</span>
+            </li>
           </ul>
         </div>
       </div>
 	  
-      <h2 id="about"><iconify-icon icon="dashicons:id-alt"></iconify-icon>关于</h2>
+    <div class="sidebar">
+      <h2 id="yl"><iconify-icon icon="mingcute:disc-line"></iconify-icon>娱乐</h2>
+      <div class="category-container">
+        <div class="category-box">
+          <ul>
+            <li>
+              <a href="https://y.zzcjxy.com/">音乐搜索器</a>
+              <span class="remark">超级校内网音乐解析</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+	  
+    <div class="sidebar">
+      <h2 id="frp"><iconify-icon icon="mingcute:clapperboard-line"></iconify-icon>FRP</h2>
+      <div class="category-container">
+        <div class="category-box">
+          <ul>
+            <li>
+              <a href="https://console.openfrp.net/">OpenFRP 开放映射</a>
+              <span class="remark">免费，免费的速率有12 Mbps </span>
+            </li>
+            <li>
+              <a href="https://preview.locyanfrp.cn/">LoCyan Frp</a>
+              <span class="remark">流量几乎无限</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="about"><iconify-icon icon="dashicons:id-alt"></iconify-icon>关于小废鼠</h2>
       <div class="category-container">
         <div class="category-box">
           <ul>
@@ -201,5 +247,5 @@
       <!-- 添加更多类别和网站 -->
     </div>
   </div>
-</body>
+  </div>
 </html>
