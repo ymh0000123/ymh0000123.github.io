@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>侧边垂直导航 - Layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/layui@2.8.0/dist/css/layui.css" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+      color: #16baaa;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 20px;
+    }
+    
+    .sidebar {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+<ul class="layui-nav layui-nav-tree layui-nav-side">
+  <li class="layui-nav-item layui-nav-itemed">
+  <h1><iconify-icon icon="material-symbols:bookmarks-outline"></iconify-icon>网站合集</h1>
+    <a href="javascript:;">默认展开</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">选项1</a></dd>
+      <dd><a href="javascript:;">选项2</a></dd>
+      <dd><a href="javascript:;">选项3</a></dd>
+    </dl>
+  </li>
+<script src="https://unpkg.com/layui@2.8.0/dist/layui.js"></script>
+<script>
+layui.use(function(){
+  var element = layui.element;
+  element.render('nav');
+});
+</script>
+
+</body>
+</html>
