@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ymh0000123.github.io</id>
+    <title>没用的小废鼠的blog</title>
+    <updated>2023-08-08T13:43:23.943Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ymh0000123.github.io"/>
+    <link rel="self" href="https://ymh0000123.github.io/atom.xml"/>
+    <subtitle>&lt;img alt=&quot;今日诗词&quot; src=&quot;https://v2.jinrishici.com/one.svg&quot;&gt;</subtitle>
+    <logo>https://ymh0000123.github.io/images/avatar.png</logo>
+    <icon>https://ymh0000123.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, 没用的小废鼠的blog</rights>
+    <entry>
+        <title type="html"><![CDATA[测试]]></title>
+        <id>https://ymh0000123.github.io/post/ce-shi/</id>
+        <link href="https://ymh0000123.github.io/post/ce-shi/">
+        </link>
+        <updated>2023-08-08T13:42:58.000Z</updated>
+        <content type="html"><![CDATA[<p>测试</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新闻]]></title>
+        <id>https://ymh0000123.github.io/post/xin-wen/</id>
+        <link href="https://ymh0000123.github.io/post/xin-wen/">
+        </link>
+        <updated>2023-08-08T08:43:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="23w31a">23w31a</h2>
+<p>23w31a加入了“村民交易的平衡性调整”内置数据包<br>
+不再出售用于弩、三叉戟和钓鱼竿的附魔书。<br>
+不同着装的图书管理员可能出售的附魔书对应魔咒<br>
+<a href="https://minecraft.fandom.com/zh/wiki/23w31a">wiki</a></p>
+<h2 id="forge团队分裂">Forge团队分裂</h2>
+<p><a href="https://www.mcmod.cn/class/11433.html">MC百科</a><br>
+forge将被NeoForge替代</p>
+]]></content>
+    </entry>
+</feed>
