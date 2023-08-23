@@ -1,96 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>网址导航</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/ico" href="/xiaofeishu.github.io/file/ico.png">
+  <link rel="shortcut icon" type="image/ico" href="/ico.png">
+  <!-- 引入Bootstrap的CSS库 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 引入Bootstrap的JavaScript库 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ymh0000123.github.io/Genshin-Impact-Good-words-and-sentences/script.js" charset="utf-8"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-	  background-image: url('https://img.locyan.cn/i/2023/06/01/647886b119c04.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      display: inline;
-      margin-right: 10px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #000;
-      padding: 8px 12px;
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      transition: background-color 0.3s ease;
-    }
-
-    a:hover {
-      background-color: #e0e0e0;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .footer img {
-      max-width: 800px;
-    }
-  </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1><iconify-icon icon="mingcute:book-6-line"></iconify-icon>网址导航</h1>
-    <ul>
-      <li><a href="/xiaofeishu.github.io/index.html"><iconify-icon icon="mingcute:clapperboard-line"></iconify-icon>小废鼠</a></li>
-      <li><a href="/lingyunshu.github.io/index.html"><iconify-icon icon="mingcute:box-3-line"></iconify-icon>凌云寺</a></li>
-	  <li><a href="/xiaofeisu_index_pcl2/index.html"><iconify-icon icon="mingcute:file-code-line"></iconify-icon>PCL2主页</a></li>
-	  <li><a href="/Simple-file-system-for-admin/index.html"><iconify-icon icon="mingcute:folder-2-line"></iconify-icon>Simple-file-system-for-admin</a></li><p></P>
-      <li><a href="./tools/index.html"><iconify-icon icon="mingcute:tool-line"></iconify-icon>小工具</a></li>
-	  <li><a href="./wzhj/index.html"><iconify-icon icon="mingcute:bookmarks-line"></iconify-icon>网站合集</a></li>
-	  <li><a href="https://xiaofeishu-boke.netlify.app/"><iconify-icon icon="mingcute:black-board-2-line"></iconify-icon>【Netlify】blog</a></li>
-	  <li><a href="https://ymh0000123.github.io/Goodbye-cheems/index.html"><iconify-icon icon="mingcute:bookmarks-line"></iconify-icon>晚安Cheems</a></li>
-      <li><a href="about.html"><iconify-icon icon="mingcute:user-4-line"></iconify-icon>关于</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="https://ymh0000123.github.io/">小废鼠的网址导航</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./wzhj/index.html">网站合集</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index_1.html">旧版本</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">关于小废鼠</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-5">
+    <div class="alert alert-primary" role="alert">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <span id="ys">加载中...</span>
+        </blockquote>
+      </figure>
+    </div>
+  </div>
+  <div class="container py-4">
+    <ul class="list-group">
+      <img src="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@main/profile-summary-card-output/apprentice/1-repos-per-language.svg"style="margin: 0 auto;"><img src="https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/algolia/4-productive-time.svg"style="margin:auto;">
+      <h1><iconify-icon icon="mingcute:book-6-line"></iconify-icon>网址导航</h1>
+      <a href="/xiaofeishu.github.io/index.html" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:clapperboard-line"></iconify-icon>小废鼠</a>
+      <a href="/lingyunshu.github.io/index.html" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:box-3-line"></iconify-icon>凌云寺</a>
+      <a href="/xiaofeisu_index_pcl2/index.html" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:file-code-line"></iconify-icon>PCL2主页</a>
+      <a href="/Simple-file-system-for-admin/index.html" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:folder-2-line"></iconify-icon>Simple-file-system-for-admin</a>
+      <a href="./tools/index.html" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:tool-line"></iconify-icon>小工具</a>
+      <a href="./wzhj/index.html" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:bookmarks-line"></iconify-icon>网站合集</a>
+      <a href="https://xiaofeishu-boke.netlify.app/" class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:black-board-2-line"></iconify-icon>【Netlify】blog</a>
+      <a href="https://ymh0000123.github.io/Goodbye-cheems/index.html"
+        class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:bookmarks-line"></iconify-icon>晚安Cheems</a>
+      <a href="https://ymh0000123.github.io/Genshin-Impact-Good-words-and-sentences/"
+        class="list-group-item list-group-item-action"><iconify-icon
+          icon="mingcute:file-code-line"></iconify-icon>原神好句API</a>
     </ul>
+    <h1><iconify-icon icon="mingcute:calendar-add-line"></iconify-icon>访问量统计</h1>
+    <img src="https://count.getloli.com/get/@:ymh0000123_github_io" alt=":ymh0000123"
+      style="max-width:100%; display: block; margin: 0 auto;" />
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-Discord" aria-expanded="false" aria-controls="flush-collapseOne">
+            Discord状态
+          </button>
+        </h2>
+        <div id="flush-Discord" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><img src="https://discord.c99.nl/widget/theme-1/957577748795252756.png"
+              style="max-width:100%; display: block; margin: 0 auto;"></div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-gx"
+            aria-expanded="false" aria-controls="flush-collapseThree">
+            在过去的一年中贡献
+          </button>
+        </h2>
+        <div id="flush-gx" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <source media="(prefers-color-scheme: light)"
+              srcset="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg"
+              style="max-width:100%; display: block; margin: 0 auto;">
+            <img alt="github contribution grid snake animation"
+              src="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg"
+              style="max-width:100%; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="footer">
-    <img src="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123.github.io@bbfe018ca88c561960098689a11ae701bcd45b9f/file/11e48d566aa4f21e5b37fb482ee34400.png" alt="Footer Image">
-  </div>
-  <div class="container">
-  <h1><iconify-icon icon="mingcute:calendar-add-line"></iconify-icon>访问量统计</h1>
-  <img src="https://count.getloli.com/get/@:ymh0000123_github_io" alt=":ymh0000123" />
-  </div>
-  <div class="container">
-    <h1><iconify-icon icon="mingcute:discord-line"></iconify-icon>discord状态</h1>
-    <img src="https://discord.c99.nl/widget/theme-1/957577748795252756.png" style="max-width:100%; display: block; margin: 0 auto;">
-    </div>
-  <div class="container">
-  <h1><iconify-icon icon="mingcute:github-line"></iconify-icon>在过去的一年中贡献</h1>
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg">
-</div>
-  <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg?color=CadetBlue" style="max-width:100%; display: block; margin: 0 auto;">
 </body>
+
 </html>
