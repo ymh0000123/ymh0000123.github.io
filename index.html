@@ -38,9 +38,11 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      max-width: 70%;
-      min-width: 70%;
-      transition: all 0.5s ease;
+      /*max-width: 70%;
+      min-width: 70%;*/
+      width: 170px;
+      height: 100px;
+      transition: all 1s ease;
     }
 
     @media (max-width: 650px) {
@@ -139,7 +141,72 @@
       text-align: center;
     }
 
+    .card-content p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* 限制在两行 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100px;
+      /* 或者任何适合你设计的宽度 */
+    }
   </style>
+  <style>
+    .card-link {
+      position: relative;
+      display: inline-block;
+      /* 或者 block，取决于你的布局需求 */
+    }
+
+    .tooltip-content {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+
+      /* 位置调整 */
+      position: absolute;
+      z-index: 1;
+      bottom: 90%;
+      /* 默认在上方显示 */
+      left: 50%;
+      transform: translateX(-50%);
+
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .card-link:hover .tooltip-content {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tooltipContainers = document.querySelectorAll('.tooltip-container');
+
+      tooltipContainers.forEach(function (container) {
+        var tooltip = container.querySelector('.tooltip-content');
+        container.addEventListener('mouseenter', function () {
+          // 检查如果元素靠近顶部
+          var elemRect = container.getBoundingClientRect();
+          if (elemRect.top < window.innerHeight / 2) {
+            // 如果元素在视口的上半部分，显示提示框在下方
+            tooltip.classList.add('tooltip-bottom');
+          } else {
+            // 否则，显示在上方（默认）
+            tooltip.classList.remove('tooltip-bottom');
+          }
+        });
+      });
+    });
+
+
+  </script>
   <script src="https://ymh-resource-files.pages.dev/js/xn.js"></script>
 </head>
 
@@ -173,7 +240,9 @@
           <p>Cloudflare Pages加速。</p>
         </div>
       </div>
+      <div class="tooltip-content">Cloudflare Pages加速</div>
     </a>
+
     <a href="https://ymh0000123.github.io/lingyunshu.github.io/index.html" class="card-link">
       <div class="card small-card">
         <div class="card-content">
@@ -181,6 +250,7 @@
           <p>凌云寺服务器。</p>
         </div>
       </div>
+      <div class="tooltip-content">凌云寺服务器</div>
     </a>
     <a href="https://ymh0000123.github.io/download-links/index.html" class="card-link">
       <div class="card small-card">
@@ -190,6 +260,7 @@
           <p>文件列表。</p>
         </div>
       </div>
+      <div class="tooltip-content">文件列表</div>
     </a>
     <a href="https://ymh0000123.github.io/xiaofeisu_index_pcl2/index.html" class="card-link">
       <div class="card small-card">
@@ -199,6 +270,7 @@
           <p>没用的小废鼠制作的PCL主页。</p>
         </div>
       </div>
+      <div class="tooltip-content">没用的小废鼠制作的PCL主页</div>
     </a>
     <a href="https://ymh0000123.github.io/tools/index.html" class="card-link">
       <div class="card small-card">
@@ -207,15 +279,17 @@
           <p>一些小工具。</p>
         </div>
       </div>
+      <div class="tooltip-content">一些小工具</div>
     </a>
     <a href="https://ymh0000123.github.io/Genshin-Good-words/" class="card-link">
       <div class="card small-card">
-        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标" style="width: 13;height: 10%;">
+        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标" style="width: 74px;height: 64px;">
         <div class="card-content">
           <h3>原神好句API</h3>
           <p>完全免费的API。</p>
         </div>
       </div>
+      <div class="tooltip-content">完全免费的API</div>
     </a>
     <a href="https://ymh0000123.github.io/Goodbye-cheems/index.html" class="card-link">
       <div class="card small-card">
@@ -225,15 +299,17 @@
           <p>纪念Cheems。</p>
         </div>
       </div>
+      <div class="tooltip-content">纪念Cheems</div>
     </a>
     <a href="https://ymh0000123.github.io/dochub/index.html" class="card-link">
       <div class="card small-card">
-        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标" style="width: 13;height: 10%;">
+        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标" style="width: 74px;height: 64px;">
         <div class="card-content">
           <h3>综合文档</h3>
           <p>综合文档。</p>
         </div>
       </div>
+      <div class="tooltip-content">综合文档</div>
     </a>
     <a href="https://xiaofeishu-boke.netlify.app/" class="card-link">
       <div class="card small-card">
@@ -243,6 +319,7 @@
           <p>没用的小废鼠的博客</p>
         </div>
       </div>
+      <div class="tooltip-content">没用的小废鼠的博客</div>
     </a>
     <a href="https://ymh0000123.github.io/XPMSL/" class="card-link">
       <div class="card small-card">
@@ -252,6 +329,7 @@
           <p>全名Xiaofeishu Python Minecraft Server Launcher</p>
         </div>
       </div>
+      <div class="tooltip-content">全名Xiaofeishu Python Minecraft Server Launcher</div>
     </a>
   </div>
   <div class="card_b" style="display: flex; justify-content: center; align-items: center; height: 3%;">
