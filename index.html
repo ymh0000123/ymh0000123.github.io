@@ -10,7 +10,7 @@
     body {
       margin: 0 15%;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #eeeeee;
     }
 
     .top-container {
@@ -38,6 +38,30 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      max-width: 70%;
+      min-width: 70%;
+      transition: all 0.5s ease;
+    }
+
+    @media (max-width: 650px) {
+      .card {
+        flex-direction: column;
+        /* 切换为垂直布局 */
+        max-width: none;
+        /* 移除最大宽度限制，允许卡片填满容器 */
+        margin: 20px 0;
+        /* 调整边距 */
+      }
+
+    }
+
+    .card_b {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: white;
+      display: flex;
     }
 
     .small-card img {
@@ -73,6 +97,7 @@
       /* 确保卡片可以根据内容伸展 */
       text-align: right;
       float: right;
+      max-width: 50%;
     }
 
     .small-card {
@@ -106,49 +131,38 @@
 
     large-card {
       flex-grow: 1;
+      text-align: left;
+      float: left;
     }
+
+    .center {
+      text-align: center;
+    }
+
   </style>
   <script src="https://ymh-resource-files.pages.dev/js/xn.js"></script>
-  <script src="https://unpkg.com/genshin-good-words"></script>
 </head>
 
 <body>
 
   <div class="top-container">
     <a href="https://ymh0000123.github.io/">
-      <div class="card large-card">
-        <img src="https://xiaofeishu-picture.pages.dev/picture/5.png" alt="图标" style="width: 64;height: 64;">
+      <div class="card_b large-card">
+        <img src="https://xiaofeishu-picture.pages.dev/picture/5.png" alt="图标" style="width: 64px;height: 64px;">
         <h1>小废鼠的网址导航</h1>
       </div>
     </a>
 
     <div class="divider"></div>
 
-    <div class="announcement-card card">
+    <div class="announcement-card card_b">
       <h2>公告</h2>
       <p id="announcement-content">加载中...</p>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-content">
-      <div style="text-align: center;">
-        <div style="display: inline-block;">
-          <img src="https://ymh0000123.pages.dev/profile-summary-card-output/2077/0-profile-details.svg "
-            style="max-width:100%; display: block; margin: 0 auto;">
-        </div>
-      </div>
-      <div style="text-align: center;">
-        <div style="display: inline-block;">
-          <img src="https://ymh0000123.pages.dev/profile-summary-card-output/2077/1-repos-per-language.svg">
-          <img src="https://ymh0000123.pages.dev/profile-summary-card-output/2077/4-productive-time.svg">
-          <img src="https://ymh0000123.pages.dev/profile-summary-card-output/2077/3-stats.svg">
-        </div>
-      </div>
-      <div style="text-align: center; color: #1890ff;">
-        <span id="ys">加载中...</span>
-      </div>
-    </div>
+  <div class="card_b" style="display: flex; justify-content: center; align-items: center; height: 10%;">
+    <span id="ys">加载中...</span>
   </div>
 
   <div class="card-container">
@@ -170,7 +184,7 @@
     </a>
     <a href="https://ymh0000123.github.io/download-links/index.html" class="card-link">
       <div class="card small-card">
-        <img src="https://xiaofeishu-picture.pages.dev/picture/32X202402161807.png" alt="网站图标">
+        <img src="https://xiaofeishu-picture.pages.dev/picture/202402161807.png" alt="网站图标">
         <div class="card-content">
           <h3>下载列表</h3>
           <p>文件列表。</p>
@@ -194,6 +208,15 @@
         </div>
       </div>
     </a>
+    <a href="https://ymh0000123.github.io/Genshin-Good-words/" class="card-link">
+      <div class="card small-card">
+        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标" style="width: 13;height: 10%;">
+        <div class="card-content">
+          <h3>原神好句API</h3>
+          <p>完全免费的API。</p>
+        </div>
+      </div>
+    </a>
     <a href="https://ymh0000123.github.io/Goodbye-cheems/index.html" class="card-link">
       <div class="card small-card">
         <img src="https://ymh0000123.github.io/Goodbye-cheems/psc.jpg" alt="网站图标">
@@ -205,7 +228,7 @@
     </a>
     <a href="https://ymh0000123.github.io/dochub/index.html" class="card-link">
       <div class="card small-card">
-        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标">
+        <img src="https://xiaofeishu-picture.pages.dev/picture/ico.png" alt="网站图标" style="width: 13;height: 10%;">
         <div class="card-content">
           <h3>综合文档</h3>
           <p>综合文档。</p>
@@ -231,11 +254,10 @@
       </div>
     </a>
   </div>
-  <div class="card">
-    <div class="card-content">
-      <img src="https://discord.c99.nl/widget/theme-1/957577748795252756.png"
-                style="max-width:100%; display: block; margin: 0 auto;">
-    </div>
+  <div class="card_b" style="display: flex; justify-content: center; align-items: center; height: 3%;">
+    <img alt="github contribution grid snake animation"
+      src="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg"
+      style="max-width:100%; display: block; margin: 0 auto;">
   </div>
   <script>
     // 获取公告内容
@@ -256,6 +278,19 @@
         // 显示错误信息
         document.getElementById('announcement-content').innerText = '加载公告内容时出错: ' + error.message;
         console.error('获取公告内容时出错:', error);
+      });
+  </script>
+  <script>
+    //原神好句api by没用的小废鼠
+    fetch('https://unpkg.com/genshin-good-words/Good-words.txt')
+      .then(response => response.text())
+      .then(data => {
+        const lines = data.split('\n');
+        const randomLine = lines[Math.floor(Math.random() * lines.length)];
+        document.getElementById('ys').innerText = randomLine;
+      })
+      .catch(error => {
+        console.error('Error fetching ys:', error);
       });
   </script>
 </body>
